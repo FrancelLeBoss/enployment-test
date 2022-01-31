@@ -4,13 +4,14 @@ import Form from "../pages/form";
 import {useRouter} from "next/router";
 
 const Home = () => {
+    
     return (
-        <div>
+        <div className='bg-indigo-100'>
          <Head>
           <title>Calcul de l'IMC</title>
           <link rel="icon" href="/favicon.ico" />
          </Head>
-            <Form/>
+         <Form/>
         </div>
     );
 };
