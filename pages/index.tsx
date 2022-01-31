@@ -8,7 +8,7 @@ const Home = () => {
     return (
         <div className='bg-indigo-100'>
          <Head>
-          <title>Calcul de l'IMC</title>
+          <title>Calcul de IMC</title>
           <link rel="icon" href="/favicon.ico" />
          </Head>
          <Form/>

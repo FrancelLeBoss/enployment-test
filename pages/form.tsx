@@ -102,7 +102,7 @@ const
                                 <h5 className={'mb-2 text-center text-lg font-bold text-blue-900'}>Resultat</h5>
                                 <div className={'my-2 flex flex-wrap mt-4 -mx-2 mr-4'}>
                                     <div className={'w-full flex'}>
-                                        <div className='text-base text-blue-900 flex-1 m-2'>{formState?.values?.["nom"] || ""+" votre Indice de Masse Corporel s'élève à:"} </div>
+                                        <div className='text-base text-blue-900 flex-1 m-2'>{formState?.values?.["nom"] || ""+" votre Indice de Masse Corporel est de :"} </div>
                                         <div className='flex-1 m-2 pl-4 text-lg font-bold'>{formState?.values?.["poids"]/((formState?.values?.["taille"]/100)*(formState?.values?.["taille"]/100)) || 0} </div>
                                     </div>
                                 </div>
@@ -120,7 +120,7 @@ const
                                     }} className='bg-blue-600 text-white text-sm rounded hover:bg-blue-800 py-2 px-2 font-semibold'>Calculer à nouveau</button>
                                     </div>
                                     <div className={'w-full sm:w-1/2 p-2 flex'}>
-                                    <button className='bg-blue-600 text-white text-sm rounded hover:bg-blue-800 py-2 px-2 font-semibold'>Consulter l'historique</button>
+                                    <button className='bg-blue-600 text-white text-sm rounded hover:bg-blue-800 py-2 px-2 font-semibold'>Consulter mon historique</button>
                                     </div>
                                 </div>
                             </div>
