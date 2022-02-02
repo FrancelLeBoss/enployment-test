@@ -9,7 +9,7 @@ interface ImcFormProps {
 interface HistoryProps {
     nom:string,
     age:string,
-    imc:number
+    imc:any
 }
 
 const
@@ -87,7 +87,7 @@ const
                                             [...history, 
                                                 {
                                                     nom:formState?.values?.["nom"],
-                                                    imc:formState?.values?.["poids"]/((formState?.values?.["poids"]/100)*(formState?.values?.["poids"]/100)),
+                                                    imc:(formState?.values?.["poids"]/((formState?.values?.["poids"]/100)*(formState?.values?.["poids"]/100))).toFixed(1),
                                                     age:formState?.values?.["date_naiss"]
                                                 }
                                             ]
@@ -102,8 +102,8 @@ const
                                 <h5 className={'mb-2 text-center text-lg font-bold text-blue-900'}>Resultat</h5>
                                 <div className={'my-2 flex flex-wrap mt-4 -mx-2 mr-4'}>
                                     <div className={'w-full flex'}>
-                                        <div className='text-base text-blue-900 flex-1 m-2'>{formState?.values?.["nom"] || ""+" votre Indice de Masse Corporel est de :"} </div>
-                                        <div className='flex-1 m-2 pl-4 text-lg font-bold'>{formState?.values?.["poids"]/((formState?.values?.["taille"]/100)*(formState?.values?.["taille"]/100)) || 0} </div>
+                                        <div className='text-base text-blue-900 flex-1 m-2'>{formState?.values?.["nom"] +" votre Indice de Masse Corporel est de :"} </div>
+                                        <div className='flex-1 m-2 pl-4 text-lg font-bold'>{(formState?.values?.["poids"]/((formState?.values?.["taille"]/100)*(formState?.values?.["taille"]/100))).toFixed(1) || 0} </div>
                                     </div>
                                 </div>
                                 <div className={'my-2 flex flex-wrap mt-4 -mx-2 mr-4'}>
